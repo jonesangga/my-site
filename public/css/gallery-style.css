@@ -1,0 +1,35 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 620px;
+    font: 1.2em/1.62 sans-serif;
+}
+
+#sketch-container {
+    width: 600px;
+    height: 600px;
+    padding: 10px;
+    border: 2px dashed black;
+}
+
+#buttons {
+    margin: 0;
+    padding: 20px 10px;
+}
+
+button {
+    font-size: inherit;
+}
+
+#source-link {
+    margin: 10px;
+}
+
+#back-to-gallery {
+    margin: 10px;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
