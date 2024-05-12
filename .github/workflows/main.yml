@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4 # grabs your repository's files
+    - name: Install cmark
+      run: |
+        sudo apt-get install -y cmark
+    - name: Build the site
+      run: make
     - name: Deploying to Neocities
       uses: bcomnes/deploy-to-neocities@v2
       with:

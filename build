@@ -1,0 +1,27 @@
+#!/bin/bash
+
+layout_dir="layout"
+
+regex='^\[([a-zA-Z0-9]+)\]:\s#\s"([a-zA-Z0-9 -]+)"$'
+
+declare -A metadata
+
+content="$(cmark -t html $1)"
+
+while IFS="\n" read line
+do
+    if [[ "$line" =~ $regex ]]; then
+        metadata+=( ["${BASH_REMATCH[1]}"]="${BASH_REMATCH[2]}" )
+    fi
+done < $1
+
+layout="$(cat ${layout_dir}/${metadata["layout"]}.html)"
+
+for key in "${!metadata[@]}"; do
+    layout="${layout//<% $key %>/${metadata[$key]}}"
+done
+
+layout="${layout//<% content %>/$content}"
+
+echo "$layout" > $2
+echo "build: $2"
