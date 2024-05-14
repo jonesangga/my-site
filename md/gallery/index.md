@@ -80,3 +80,7 @@ In each page, you can generate random canvas, toggle the quality, and save.
 - [Retro 2 v3](/gallery/36-retro-2-v3.html)
 - [Retro 3 v1](/gallery/36-retro-3-v1.html)
 - [Retro 3 v3](/gallery/36-retro-3-v3.html)
+- [Op 6](/gallery/37-op6.html)
+- [Op 9](/gallery/40-op9.html)
+- [Op 10](/gallery/40-op10.html)
+- [Op 11](/gallery/40-op11.html)
